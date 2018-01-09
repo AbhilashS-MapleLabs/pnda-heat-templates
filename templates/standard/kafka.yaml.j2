@@ -61,6 +61,12 @@ parameters:
     default: ''
   hadoop_distro:
     type: string
+  kafka_grain_pnda_internal_network:
+    type: string
+    default: ''
+  kafka_grain_pnda_ingest_network:
+    type: string
+    default: ''
 
 resources:
   port:
@@ -87,6 +93,8 @@ resources:
             $roles$: 'kafka,kafka_tool'
             $$SPECIFIC_CONF$$: { get_param: specific_config }
             $hadoop_distro$: { get_param: hadoop_distro }
+            $kafka_grain_pnda_internal_network$: { get_param: kafka_grain_pnda_internal_network }
+            $kafka_grain_pnda_ingest_network$: { get_param: kafka_grain_pnda_ingest_network }
   deploy_package:
     type: OS::Heat::SoftwareDeployment
     properties:

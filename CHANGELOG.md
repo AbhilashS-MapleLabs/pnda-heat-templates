@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 ## [Unreleased]
 ### Changed
 - PNDA-3583: hadoop distro is now part of grains
+- Issue-143: Added Kafka ingest and pnda interface name added as grains to kafka nodes
+- Issue-144: Added param "hadoop_distro" to mgr1 node template for pico flavor.
+- Issue-145: Added "hadoop.distro" grain to saltmaster_install bootstrap script.
+- Issue-146: Updated new path of "hdp_core_stack_repo" in saltmaster_install bootstarp script.
 
 ## [1.4.0] 2017-11-24
 ### Added:

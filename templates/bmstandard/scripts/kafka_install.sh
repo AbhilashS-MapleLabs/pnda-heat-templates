@@ -79,6 +79,15 @@ roles: [${ROLES}]
 EOF
 fi
 
+# The vlan grains required for kafka nodes
+if [ "$kafka_grain_pnda_internal_network$" != "$" ] && [ "$kafka_grain_pnda_ingest_network$" != "$" ]; then
+cat >> /etc/salt/grains <<EOF
+vlans:
+  pnda: $kafka_grain_pnda_internal_network$
+  ingest: $kafka_grain_pnda_ingest_network$
+EOF
+fi
+
 PIP_INDEX_URL="$pnda_mirror$/mirror_python/simple"
 TRUSTED_HOST=$(echo $PIP_INDEX_URL | awk -F'[/:]' '/http:\/\//{print $4}')
 cat << EOF > /etc/pip.conf

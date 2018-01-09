@@ -194,6 +194,10 @@ parameter_defaults:
   #
   #hypervisor_count: 30
 
+  # Network interface to be used for Kafka nodes for ingestion.
+  kafka_grain_pnda_internal_network: eth0
+  kafka_grain_pnda_ingest_network: eth0
+
 resource_registry:
   #
   # OS::Pnda::preConfig: the resource definition of a pre configuration file
