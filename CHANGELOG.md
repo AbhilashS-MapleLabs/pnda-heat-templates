@@ -4,6 +4,7 @@ All notable changes to this project will be documented in this file.
 ## [Unreleased]
 ### Changed
 - PNDA-3583: hadoop distro is now part of grains
+- Issue-144: Added param "hadoop_distro" to mgr1 node template for pico flavor.
 
 ## [1.4.0] 2017-11-24
 ### Added:
