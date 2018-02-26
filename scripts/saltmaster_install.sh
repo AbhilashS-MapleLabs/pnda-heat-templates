@@ -122,10 +122,6 @@ pnda_mirror:
 hadoop:
   parcel_repo: '$pnda_mirror$/mirror_cloudera'
 
-anaconda:
-  parcel_version: "4.0.0"
-  parcel_repo: '$pnda_mirror$/mirror_anaconda'
-
 packages_server:
   base_uri: $pnda_mirror$
 
